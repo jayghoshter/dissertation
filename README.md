@@ -31,3 +31,19 @@ latexmk -pvc
 ```
 
 For an additional layer of convenience, a `Makefile` is included.
+
+# Updating the class
+
+The following commands were used to create the subtree.
+
+```
+git remote add -f kaobook https://github.com/fmarotta/kaobook
+git subtree add --prefix=kaobook kaobook master --squash
+```
+
+The following can be used to update it. 
+
+```
+git fetch kaobook master
+git subtree pull --prefix=kaobook kaobook master --squash
+```
